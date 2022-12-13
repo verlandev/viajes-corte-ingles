@@ -20,8 +20,13 @@ $backgroundColor2: white;
 // ----------------------
 
 * {
+  box-sizing: border-box;
+}
+
+html, body, .root{
+  height: 100%;
   margin: 0;
-  padding: 0;
+  font-family: 'Lato';
 }
 
 .header{
@@ -35,6 +40,7 @@ $backgroundColor2: white;
   background-color: $backgroundColor1;
   padding: 20px 0;
   @include flex(flex,row ,space-between, center,nowrap);
+  box-shadow: 0.5px 0.5px 5px 1px;
 
 
       &__logo{
@@ -53,6 +59,13 @@ $backgroundColor2: white;
       &__li{
         border: solid 2px green;
         list-style: none;
+        padding: 10px;
+
+        &--icon{
+            width: 15px;
+            
+
+        }
       }
       
       &__a{
